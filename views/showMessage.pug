@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Habla con Toto
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css")
+    script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
+  body
+  
+  style(type="text/css").
+    .response-body{
+      border-width: 0 4px 0 0 !important;
+    }
+
+  .columns.is-multiline.is-mobile.is-centered
+    .column.is-10-tablet.is-12-mobile
+      section.section
+        div.container
+          h1.title Mensaje recibido
+          p.subtitle :)
+    .column.is-5-tablet.is-10-mobile
+      article.message.is-link
+        .message-body
+          .content.is-small
+            h5= name + ' dice:'
+            p= content
+      article.message.is-warning
+        .message-body.response-body
+          .content.is-small
+            h5.has-text-right Toto
+            p.has-text-right Este es un texto estático 👁  👁
+      button.button(onclick='window.location.href = "/"') regresar
+    .column.is-5-tablet.is-10-mobile.img-bottom
+      img(src="../../../toto.svg", alt="es toto" width=400)
