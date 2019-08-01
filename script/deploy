@@ -3,6 +3,6 @@ ssh toto@165.22.160.30 <<EOF
  cd ~/nodeJenkins
  git pull
  npm install -- save
- pm2 restart all
+ pm2 restart app.js
  exit
 EOF
